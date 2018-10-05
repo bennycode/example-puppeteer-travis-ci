@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-const Server = require('../../index');
+const Server = require('../../src/Server');
 
 describe('Server', () => {
   let browser = undefined;

@@ -7,7 +7,7 @@
     "puppeteer": "1.9.0"
   },
   "license": "UNLICENSED",
-  "main": "index.js",
+  "main": "src/Server.js",
   "name": "example-puppeteer-travis-ci",
   "repository": {
     "type": "git",
