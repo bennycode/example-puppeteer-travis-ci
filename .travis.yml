@@ -1,11 +1,6 @@
 dist: trusty
 sudo: required
 
-addons:
-  apt:
-    packages:
-    - libnss3
-
 language: node_js
 node_js:
 - "8.11.3"
