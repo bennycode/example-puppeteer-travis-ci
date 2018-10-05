@@ -3,7 +3,8 @@
     "express": "4.16.3"
   },
   "devDependencies": {
-    "jasmine": "3.2.0"
+    "jasmine": "3.2.0",
+    "puppeteer": "1.9.0"
   },
   "license": "UNLICENSED",
   "main": "index.js",

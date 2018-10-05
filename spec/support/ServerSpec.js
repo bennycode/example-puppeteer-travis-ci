@@ -1,18 +1,28 @@
+const puppeteer = require('puppeteer');
 const Server = require('../../index');
 
 describe('Server', () => {
+  let browser = undefined;
   let server = undefined;
 
-  beforeEach(() => server = new Server());
-
-  afterEach(async () => {
-    if (server) {
-      await server.stop();
-    }
+  beforeEach(async () => {
+    browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox'], dumpio: true});
+    server = new Server();
   });
 
-  it('stars on a default port', async () => {
+  afterEach(async () => {
+    if (browser) await browser.close();
+    if (server) await server.stop();
+  });
+
+  it('serves a homepage with a title', async () => {
     const port = await server.start();
-    expect(port).toBe(8080);
+    const url = `http://localhost:${port}/`;
+
+    const page = await browser.newPage();
+    await page.goto(url);
+
+    const title = await page.title();
+    expect(title).toBe('Hello');
   });
 });

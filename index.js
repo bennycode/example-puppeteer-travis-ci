@@ -3,6 +3,7 @@ const express = require('express');
 class Server {
   constructor() {
     this.app = express();
+    this.app.get('/', (request, response) => response.send('<title>Hello</title>'));
   }
 
   start(port = 8080) {
