@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "express": "4.16.3"
+  },
+  "devDependencies": {
+    "jasmine": "3.2.0"
+  },
+  "license": "UNLICENSED",
+  "main": "index.js",
+  "name": "example-puppeteer-travis-ci",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bennyn/example-puppeteer-travis-ci.git"
+  },
+  "scripts": {
+    "test": "jasmine"
+  },
+  "version": "1.0.0"
+}
