@@ -4,7 +4,7 @@
   },
   "devDependencies": {
     "jasmine": "3.2.0",
-    "puppeteer": "1.9.0"
+    "puppeteer": "19.4.0"
   },
   "license": "UNLICENSED",
   "main": "src/Server.js",
